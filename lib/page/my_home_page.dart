@@ -7,10 +7,10 @@ class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
 
   @override
-  State<StatefulWidget> createState() => _MyHomePage();
+  State<StatefulWidget> createState() => _MyHomePageState();
 }
 
-class _MyHomePage extends State<MyHomePage> {
+class _MyHomePageState extends State<MyHomePage> {
   var selectedIndex = 0;
 
   void _onNaviSelected(value) {
