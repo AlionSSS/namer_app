@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../common/tuple2.dart';
 
 /// 从下到上展示 ListView，并且带颜色递减
 class ColorListView extends StatelessWidget {
   final Color color;
-  final List<Tuple2<String, bool>> values;
+  final List<(String, bool)> values;
   final int count;
 
   const ColorListView({super.key, required this.color, required this.values})
@@ -32,11 +31,11 @@ class ColorListView extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(values[i].second ? Icons.favorite : null,
+                Icon(values[i].$2 ? Icons.favorite : null,
                     color: buildColor(i, count, color)),
                 const SizedBox(width: 4),
                 Text(
-                  values[i].first,
+                  values[i].$1,
                   style: TextStyle(color: buildColor(i, count, color)),
                 ),
               ],
